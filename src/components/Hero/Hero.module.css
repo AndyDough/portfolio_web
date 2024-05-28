@@ -52,7 +52,7 @@
 }
 
 .heroImg {
-  width: 40%;
+  width: 30%;
   z-index: 1;
 
   animation-name: floating;
@@ -105,7 +105,9 @@
   .container {
     flex-direction: column-reverse;
   }
-
+  .title {
+    text-align: center;
+  }
   .content {
     align-items: center;
   }
