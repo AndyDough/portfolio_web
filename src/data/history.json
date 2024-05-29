@@ -1,0 +1,18 @@
+[
+  {
+    "role": "Fullstack Engineer",
+    "organisation": "ScholarlyMate",
+    "startDate": "Mar, 2024",
+    "endDate": "May, 2024",
+    "experiences": ["Setting up Github repo", "Provided leadership"],
+    "imageSrc": "history/book.webp"
+  },
+  {
+    "role": "Team Lead",
+    "organisation": "FullyHacks2024",
+    "startDate": "Feb, 24 2024",
+    "endDate": "Feb, 25 2024",
+    "experiences": ["Created backend", "Help implement frontend"],
+    "imageSrc": "history/fullyhacks.svg"
+  }
+]
