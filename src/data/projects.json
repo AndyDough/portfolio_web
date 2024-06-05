@@ -1,26 +1,17 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "ScholarlyMate",
+    "imageSrc": "projects/book.webp",
+    "description": "Allows students to create a personalized study schedule, set reminders for assignments and exams, and track progress on learning goals.",
+    "skills": ["Django", "Python", "HTML", "CSS"],
+    "source": "https://github.com/BearB34R/ScholarlyMate"
   },
   {
-    "title": "Project B",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Neon News",
+    "imageSrc": "projects/news.webp",
+    "description": "Leveraging news API to provide users with the latest news articles, and a search feature to find articles on specific topics.",
+    "skills": ["JavaScript", "HTML", "CSS", "Node.js", "Express.js"],
+    "demo": "https://deploying-neon-news-0469d6666bdc.herokuapp.com/",
+    "source": "https://github.com/BearB34R/FullyHacks2024"
   }
 ]
