@@ -24,12 +24,12 @@
   font-weight: 900;
   margin-bottom: 33px;
   font-family: var(--font-roboto);
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 70%,
     rgba(255, 255, 255, 0) 120%
-  );
-  -webkit-text-fill-color: transparent;
+  ); */
+  -webkit-text-fill-color: (--color-text);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -90,7 +90,7 @@
   }
 } */
 
-.topBlur {
+/* .topBlur {
   position: absolute;
   width: 50vw;
   height: 50vw;
@@ -116,7 +116,7 @@
   background: rgba(25, 55, 109, 0.7);
   filter: blur(100px);
   z-index: 0;
-}
+} */
 
 @media screen and (max-width: 830px) {
   .container {
