@@ -68,8 +68,7 @@
   flex-direction: row;
   align-items: center;
   gap: 17px;
-  background: #19376d;
-  background: var(--color-primary);
+  background: var(--color-box-black);
   border-radius: 10px;
   padding: 24px;
 }
@@ -88,6 +87,7 @@
 }
 
 .historyItemDetails p {
+  color: var(--color-primary);
   font-size: 20px;
   font-weight: 300;
 }
