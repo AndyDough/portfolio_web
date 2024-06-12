@@ -4,7 +4,10 @@
     "organisation": "ScholarlyMate",
     "startDate": "Mar, 2024",
     "endDate": "May, 2024",
-    "experiences": ["Setting up Github repo", "Provided leadership"],
+    "experiences": [
+      "Engineered user-friendly UI components, including calendar widgets and event details.",
+      "Led project DevOps producing 33% increase in workflow"
+    ],
     "imageSrc": "history/book.webp"
   },
   {
@@ -12,7 +15,10 @@
     "organisation": "FullyHacks2024",
     "startDate": "Feb, 24 2024",
     "endDate": "Feb, 25 2024",
-    "experiences": ["Created backend", "Help implement frontend"],
+    "experiences": [
+      "Led team of 3 engineers to create a news app",
+      "Implemented essential services including deployment infrastructure, backend architecture, and version control"
+    ],
     "imageSrc": "history/fullyhacks.svg"
   }
 ]
