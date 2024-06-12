@@ -4,6 +4,19 @@ import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
 
 export const Hero = () => {
+  const handleContactClick = (event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    const targetElement = document.getElementById("contact");
+
+    if (targetElement) {
+      // Scroll the target element into view
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "center", // Aligns the target element to the center of the screen
+      });
+    }
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.content}>
@@ -15,7 +28,11 @@ export const Hero = () => {
           Always learning and looking for new opportunities. Contact me to learn
           more!
         </p>
-        <a href="#contact" className={styles.contactBtn}>
+        <a
+          href="#contact"
+          className={styles.contactBtn}
+          onClick={handleContactClick}
+        >
           Contact Me
         </a>
       </div>
