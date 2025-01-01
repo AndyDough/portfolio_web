@@ -8,5 +8,9 @@
   --color-box-black: #1b1c1d;
 
   /* Fonts */
-  --font-robot: "Roboto";
+  --font-roboto: 'Outfit', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }

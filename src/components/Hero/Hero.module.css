@@ -9,6 +9,7 @@
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
+  overflow: hidden;
 }
 
 .content {
@@ -32,7 +33,8 @@
 .description {
   font-size: 30px;
   font-family: var(--font-roboto);
-  margin-bottom: 52px;
+  margin: 0;
+  min-height: 120px;
 }
 
 .contactBtn {
@@ -49,7 +51,7 @@
 .heroImg {
   width: 40%;
   max-width: 500px;
-  z-index: 1;
+  z-index: 2;
   -webkit-animation: morph 8s ease-in-out infinite;
   animation: morph 8s ease-in-out infinite;
   background-image: url("assets/hero/heroImage.jpg");
@@ -74,6 +76,20 @@
   }
 }
 
+.greeting {
+  display: inline-block;
+  color: var(--color-primary);
+  border-right: 2px solid var(--color-primary);
+  padding-right: 5px;
+  animation: blink 0.7s step-end infinite;
+  font-size: 30px;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: var(--color-primary) }
+}
+
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
@@ -83,5 +99,81 @@
   }
   .content {
     align-items: center;
+  }
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.greetingLine {
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.skillsContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.parenthesis {
+  font-size: 40px;
+  color: var(--color-primary);
+  font-weight: bold;
+  user-select: none;
+}
+
+.skillsCarousel {
+  width: 300px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.carouselTrack {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: fit-content;
+}
+
+.skillItem {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.skillIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  user-select: none;
+}
+
+.skillIcon:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
