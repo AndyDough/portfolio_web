@@ -22,19 +22,8 @@ export const Hero = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Hi, I'm Andy</h1>
         <p className={styles.description}>
-          I'm a Computer Science student studying at Cal State Fullerton.
+          Hello, I'm Andy Nguyen, a software developer working on mastering fullstack development. Check out what I'm working on as I continue to learn.
         </p>
-        <p className={styles.description}>
-          Always learning and looking for new opportunities. Contact me to learn
-          more!
-        </p>
-        <a
-          href="#contact"
-          className={styles.contactBtn}
-          onClick={handleContactClick}
-        >
-          Contact Me
-        </a>
       </div>
       <img
         src={getImageUrl("hero/heroImage.jpg")}
