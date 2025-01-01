@@ -15,7 +15,13 @@ body {
   box-sizing: inherit;
 }
 
+/* Base styling for html and body */
+:root {
+  background-color: var(--color-primary);
+}
+
 .App {
+  padding-top: var(--navbar-height);
   background-color: var(--color-bg);
   width: 100%;
   min-height: 100vh; /* Ensure it covers the full viewport height */
