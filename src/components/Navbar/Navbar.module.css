@@ -62,24 +62,6 @@
   transition: transform 0.3s ease;
 }
 
-.navbar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-primary);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.3s ease;
-  z-index: -1;
-}
-
-.navbar.scrolled::before {
-  transform: scaleY(1);
-}
-
 .leftSection {
   display: flex;
   align-items: center;
@@ -592,6 +574,22 @@
   .rightSection > .contactButton {
     display: none;
   }
+
+  .navbar::before {
+    display: none;
+  }
+
+  .navbar.scrolled::before {
+    transform: none;
+  }
+
+  .title {
+    display: none;  /* Hide AN button in mobile */
+  }
+  
+  .leftSection {
+    display: none;  /* Hide entire left section since AN is the only element */
+  }
 }
 
 /* Desktop Layout (>831px) */
@@ -606,6 +604,24 @@
 
   .rightSection .contactButton {
     display: block;
+  }
+
+  .navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+    z-index: -1;
+  }
+
+  .navbar.scrolled::before {
+    transform: scaleY(1);
   }
 }
 
