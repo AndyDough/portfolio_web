@@ -4,8 +4,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 49px;
+  justify-content: center;
+  min-height: 100vh;
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
@@ -15,9 +15,11 @@
 .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   color: var(--color-text);
   z-index: 1;
+  text-align: center;
 }
 
 .title {
@@ -35,8 +37,8 @@
   font-family: var(--font-roboto);
   margin: 0 auto;
   min-height: 120px;
-  max-width: 800px; /* Add this line */
-  text-align: left; /* Add this line */
+  max-width: 800px; 
+  text-align: left; 
 }
 
 .contactBtn {
@@ -94,6 +96,7 @@
 
 @media screen and (max-width: 830px) {
   .container {
+    min-height: 100vh;
     flex-direction: column-reverse;
     margin-left: 5%;
     margin-right: 5%;
@@ -111,13 +114,14 @@
 
   .textWrapper {
     padding: 0 10px;
+    align-items: center;
   }
 
   .description {
     text-align: center;
     width: 100%;
     padding: 0 10px; 
-    max-width: none; /* Reset max-width for mobile */
+    max-width: none;
   }
 
   .greetingLine {
@@ -136,11 +140,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: flex-start; 
+  max-width: 800px; 
+  margin: 0 auto; 
 }
 
 .greetingLine {
   height: 45px;
   margin-bottom: 10px;
+  text-align: left; 
+  align-self: flex-start; 
 }
 
 .name {
@@ -168,7 +177,7 @@
 .skillIcon {
   width: 40px;
   height: 40px;
-  object-fit: contain; /* Keep image proportions */
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 

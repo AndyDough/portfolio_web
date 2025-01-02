@@ -26,6 +26,8 @@ body {
   width: 100%;
   min-height: 100vh; /* Ensure it covers the full viewport height */
   overflow-x: hidden; /* Hide horizontal overflow */
+  height: 200vh; /* Allow scrolling */
+  scroll-behavior: smooth;
 }
 
 /* For Firefox */
