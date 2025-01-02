@@ -2,60 +2,126 @@
 
 .container {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 60px 120px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: none;
+  box-shadow: none;
+  flex-direction: row;
+  transition: transform 0.3s ease;
   border-radius: 10px;
-  background: var(--color-box-black);
-  box-shadow: 0 16px 14px 0 #05080c;
-  padding: 18px 24px;
-  max-width: 345px;
+  margin-bottom: 30px;
+}
+
+.container:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.container:hover {
+  transform: translateY(-5px);
 }
 
 .image {
-  margin-bottom: 26px;
+  width: 600px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.content {
+  flex: 1;
+  max-width: 500px;
+  padding-right: 20px;
 }
 
 .title {
-  font-size: 25px;
+  font-size: 36px;
   font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--color-primary);
 }
 
 .description {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
   margin-top: 6px;
-  font-size: 25px;
-  font-weight: 400;
 }
 
 .skills {
-  width: 100%;
-  margin-top: 14px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 12px;
+  margin: 20px 0;
   list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 30px;
+  flex-direction: row;
 }
 
 .skill {
-  font-size: 25px;
-  font-weight: 400;
-  border-radius: 100px;
+  font-size: 14px;
+  padding: 5px 15px;
+  border-radius: 20px;
   background: var(--color-dark);
-  padding: 2px 22px;
+  color: var(--color-text);
+  font-weight: 400;
 }
 
 .links {
+  display: flex;
+  gap: 30px;
   width: 100%;
   margin-top: 26px;
-  display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .link {
-  text-decoration: none;
-  color: var(--color-text);
-  font-size: 30px;
-  font-weight: 600;
-  border-radius: 100px;
+  padding: 10px 25px;
+  border-radius: 25px;
   background: var(--color-primary);
-  padding: 1px 22px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 830px) {
+  .container, .container:nth-child(even) {
+    padding: 40px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .content {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .links {
+    justify-content: center;
+  }
 }

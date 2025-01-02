@@ -1,6 +1,5 @@
 @import "./vars.css";
 
-/* Reset default margin and padding */
 html,
 body {
   margin: 0;
@@ -8,14 +7,12 @@ body {
   box-sizing: border-box;
 }
 
-/* Apply box-sizing to all elements */
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-/* Base styling for html and body */
 :root {
   background-color: var(--color-primary);
 }
@@ -24,28 +21,26 @@ body {
   padding-top: var(--navbar-height);
   background-color: var(--color-bg);
   width: 100%;
-  min-height: 100vh; /* Ensure it covers the full viewport height */
-  overflow-x: hidden; /* Hide horizontal overflow */
-  height: 200vh; /* Allow scrolling */
+  min-height: 100vh;
+  overflow-x: hidden;
+  height: 200vh;
   scroll-behavior: smooth;
 }
 
-/* For Firefox */
 * {
   scrollbar-color: var(--color-secondary) var(--color-dark);
 }
 
-/* For WebKit-based browsers */
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 12px; 
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-dark); /* Color of the track */
+  background: var(--color-dark); 
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-secondary); /* Color of the scrollbar thumb */
-  border-radius: 6px; /* Rounded corners on the thumb */
-  border: 3px solid lightgray; /* Creates padding around the thumb */
+  background-color: var(--color-secondary);
+  border-radius: 6px;
+  border: 3px solid lightgray;
 }
