@@ -33,8 +33,10 @@
 .description {
   font-size: 30px;
   font-family: var(--font-roboto);
-  margin: 0;
+  margin: 0 auto;
   min-height: 120px;
+  max-width: 800px; /* Add this line */
+  text-align: left; /* Add this line */
 }
 
 .contactBtn {
@@ -93,12 +95,40 @@
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0 10px;
   }
+
+  .content {
+    align-items: center;
+    width: 100%;
+  }
+
   .title {
     text-align: center;
   }
-  .content {
-    align-items: center;
+
+  .textWrapper {
+    padding: 0 10px;
+  }
+
+  .description {
+    text-align: center;
+    width: 100%;
+    padding: 0 10px; 
+    max-width: none; /* Reset max-width for mobile */
+  }
+
+  .greetingLine {
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .skillsContainer {
+    justify-content: center;
+    padding: 0 10px;
   }
 }
 
@@ -120,60 +150,28 @@
 
 .skillsContainer {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-top: 20px;
-  width: 100%;
-  overflow: hidden;
-  user-select: none;
-}
-
-.parenthesis {
-  font-size: 40px;
-  color: var(--color-primary);
-  font-weight: bold;
-  user-select: none;
-}
-
-.skillsCarousel {
-  width: 300px;
-  overflow: hidden;
-  margin: 0 10px;
-}
-
-.carouselTrack {
-  display: flex;
-  animation: scroll 20s linear infinite;
-  width: fit-content;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .skillItem {
-  flex: 0 0 auto;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 5px;
 }
 
 .skillIcon {
   width: 40px;
   height: 40px;
-  object-fit: contain;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  user-select: none;
+  object-fit: contain; /* Keep image proportions */
+  transition: transform 0.3s ease;
 }
 
 .skillIcon:hover {
-  transform: scale(1.1);
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  transform: scale(1.2);
 }

@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
-
+import React, { useState, useEffect } from "react";
 import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
 
@@ -16,26 +15,23 @@ export const Hero = () => {
 
   const skills = [
     { name: "React", src: "skills/react.png" },
+    { name: "Python", src: "skills/python.png" },
     { name: "JavaScript", src: "skills/javascript.webp" },
-    { name: "HTML", src: "skills/html.png" },
-    { name: "CSS", src: "skills/css.png" },
-    { name: "Node", src: "skills/node.png" },
-    { name: "Python", src: "skills/python.png" }
+    { name: "swift", src: "skills/swift.webp" },
+    { name: "C++", src: "skills/cpp.png" },
+    { name: "MongoDB", src: "skills/mongodb.png" },
+
   ];
 
   const [currentGreeting, setCurrentGreeting] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const carouselRef = useRef(null);
 
   useEffect(() => {
     const typingSpeed = 150;
     const deletingSpeed = 100;
-    const wordDelay = 1000;
+    const wordDelay = 2000;
 
     const animateText = () => {
       const currentWord = greetings[currentIndex];
@@ -66,36 +62,6 @@ export const Hero = () => {
     return () => clearTimeout(timer);
   }, [currentGreeting, isTyping, isDeleting, currentIndex]);
 
-  const handleContactClick = (event) => {
-    event.preventDefault(); // Prevent default anchor behavior
-    const targetElement = document.getElementById("contact");
-
-    if (targetElement) {
-      // Scroll the target element into view
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "center", // Aligns the target element to the center of the screen
-      });
-    }
-  };
-
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    carouselRef.current.scrollLeft = scrollLeft - walk;
-  };
 
   return (
     <section className={styles.container}>
@@ -109,27 +75,15 @@ export const Hero = () => {
             Check out what I'm working on as I continue to learn!
           </p>
           <div className={styles.skillsContainer}>
-            <span className={styles.parenthesis}>(</span>
-            <div className={styles.skillsCarousel}
-              ref={carouselRef}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseUp}
-              onMouseMove={handleMouseMove}
-            >
-              <div className={styles.carouselTrack}>
-                {[...skills, ...skills].map((skill, index) => (
-                  <div key={index} className={styles.skillItem}>
-                    <img 
-                      src={getImageUrl(skill.src)} 
-                      alt={skill.name}
-                      className={styles.skillIcon}
-                    />
-                  </div>
-                ))}
+            {skills.map((skill, index) => (
+              <div key={index} className={styles.skillItem}>
+                <img 
+                  src={getImageUrl(skill.src)}
+                  alt={skill.name}
+                  className={styles.skillIcon}
+                />
               </div>
-            </div>
-            <span className={styles.parenthesis}>)</span>
+            ))}
           </div>
         </div>
       </div>
