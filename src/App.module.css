@@ -5,6 +5,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  overscroll-behavior: none; /* Add this line */
 }
 
 *,
@@ -23,8 +25,8 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  height: 200vh;
   scroll-behavior: smooth;
+  position: relative; /* Add this line */
 }
 
 * {

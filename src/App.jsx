@@ -8,24 +8,11 @@ import { Contact } from "./components/Contact/Contact";
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [showProjects, setShowProjects] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) { // Adjust threshold as needed
-        setShowProjects(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div className={styles.App}>
       <Navbar />
       <Hero />
-      {showProjects && <Projects />}
+      <Projects />
       <Contact />
     </div>
   );
