@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import styles from "./Navbar.module.css";
-import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,6 +28,11 @@ export const Navbar = () => {
     }
   };
 
+  const handleResumeClick = (e) => {
+    e.preventDefault();
+    window.open('/resume.pdf', '_blank'); // Make sure to place your resume.pdf in the public folder
+  };
+
   return (
     <>
       <div className={styles.accentBar} />
@@ -40,7 +44,7 @@ export const Navbar = () => {
           <div className={styles.mainMenu}>
             <ul className={styles.menuItems}>
               <li><a href="#about" onClick={handleNavLinkClick}>About</a></li>
-              <li><a href="#experience" onClick={handleNavLinkClick}>Experience</a></li>
+              <li><a href="#resume" onClick={handleResumeClick}>Resume</a></li>
               <li><a href="#projects" onClick={handleNavLinkClick}>Projects</a></li>
             </ul>
           </div>
@@ -56,7 +60,7 @@ export const Navbar = () => {
           <div className={`${styles.mobileMenu} ${menuOpen ? styles.menuOpen : ''}`}>
             <ul className={styles.mobileMenuItems}>
               <li><a href="#about" onClick={(e) => { handleNavLinkClick(e); setMenuOpen(false); }}>About</a></li>
-              <li><a href="#experience" onClick={(e) => { handleNavLinkClick(e); setMenuOpen(false); }}>Experience</a></li>
+              <li><a href="#resume" onClick={(e) => { handleResumeClick(); setMenuOpen(false); }}>Resume</a></li>
               <li><a href="#projects" onClick={(e) => { handleNavLinkClick(e); setMenuOpen(false); }}>Projects</a></li>
               <li><a href="#contact" onClick={(e) => { handleNavLinkClick(e); setMenuOpen(false); }}>Contact</a></li>
             </ul>
