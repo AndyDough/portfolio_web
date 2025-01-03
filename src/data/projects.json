@@ -1,5 +1,13 @@
 [
   {
+    "title": "MemEasy",
+    "imageSrc": "projects/memEasy.png",
+    "description": "A modern iOS flashcard application that streamlines studying through intuitive swipe gestures and smart progress tracking. Built with SwiftUI and leveraging SwiftData for persistence, the app allows users to create custom decks, import flashcards from PDFs, and study with engaging card animations.",
+    "skills": ["Swift", "SwiftUI", "Core Data", "PDFKit"],
+    "demo": "https://www.youtube.com/watch?v=3Q6J9Q1Z9ZI",
+    "source": "https://github.com/BearB34R/memEasy"
+  },
+  {
     "title": "ScholarlyMate",
     "imageSrc": "projects/scholarly_mate.png",
     "description": "Allows students to create a personalized study schedule, set reminders for assignments and exams, and track progress on learning goals.",

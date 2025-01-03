@@ -27,11 +27,14 @@
 
 .image {
   width: 600px;
-  height: 350px;
-  object-fit: cover;
+  height: auto; /* Changed from fixed height */
+  object-fit: contain; /* Changed from cover to contain */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 0;
+  max-width: 100%; /* Ensure image doesn't overflow */
+  image-rendering: -webkit-optimize-contrast; /* Improve image quality */
+  image-rendering: crisp-edges;
 }
 
 .content {
@@ -108,7 +111,7 @@
 
   .image {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px; /* Changed from 500px */
     height: auto;
   }
 
