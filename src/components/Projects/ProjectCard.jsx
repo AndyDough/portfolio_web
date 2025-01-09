@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import styles from "./ProjectCard.module.css";
 import { getImageUrl } from "../../utils";
@@ -6,6 +6,24 @@ import { getImageUrl } from "../../utils";
 export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source },
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [needsExpansion, setNeedsExpansion] = useState(false);
+  const descriptionRef = useRef(null);
+
+  const checkOverflow = () => {
+    if (descriptionRef.current) {
+      const isOverflowing = descriptionRef.current.scrollHeight > descriptionRef.current.clientHeight;
+      setNeedsExpansion(isOverflowing);
+    }
+  };
+
+  useEffect(() => {
+    checkOverflow();
+    window.addEventListener('resize', checkOverflow);
+    
+    return () => window.removeEventListener('resize', checkOverflow);
+  }, [description]);
+
   return (
     <div className={styles.container}>
       <a 
@@ -22,7 +40,20 @@ export const ProjectCard = ({
       </a>
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
+        <div 
+          ref={descriptionRef} 
+          className={`${styles.description} ${isExpanded ? styles.expanded : ''}`}
+        >
+          {description}
+        </div>
+        {needsExpansion && (
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)} 
+            className={styles.readMoreBtn}
+          >
+            {isExpanded ? 'Show Less' : 'Read More'}
+          </button>
+        )}
         <ul className={styles.skills}>
           {skills.map((skill, id) => (
             <li key={id} className={styles.skill}>
