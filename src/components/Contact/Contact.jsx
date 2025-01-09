@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 import styles from "./Contact.module.css";
 import { getImageUrl } from "../../utils";
@@ -6,6 +6,10 @@ import { getImageUrl } from "../../utils";
 export const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState('');
+
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,7 +24,8 @@ export const Contact = () => {
       .then(() => {
         setStatus('success');
         form.current.reset();
-      }, () => {
+      }, (error) => {
+        console.error('EmailJS Error:', error);
         setStatus('error');
       });
   };
