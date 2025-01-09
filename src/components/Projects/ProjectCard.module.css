@@ -185,6 +185,7 @@
   .description {
     max-height: none; /* Allow full text on mobile */
     -webkit-line-clamp: unset;
+    line-clamp: unset;
   }
   
   .readMoreBtn {
