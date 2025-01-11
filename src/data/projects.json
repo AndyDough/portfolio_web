@@ -8,19 +8,19 @@
     "source": "https://github.com/BearB34R/memEasy"
   },
   {
+    "title": "Neon News",
+    "imageSrc": "projects/neon_news.png",
+    "description": "A responsive web application that aggregates and displays real-time news content using the NewsAPI. Features include dynamic content filtering, advanced search functionality with autocomplete, and a clean, modern UI built with vanilla JavaScript. Implemented RESTful API integration, client-side caching for improved performance, and mobile-first responsive design principles. The application handles thousands of API requests efficiently while maintaining optimal load times.",
+    "skills": ["JavaScript", "HTML", "CSS", "Node.js", "Express.js"],
+    "demo": "https://neon-news.netlify.app/",
+    "source": "https://github.com/BearB34R/FullyHacks2024"
+  },
+  {
     "title": "ScholarlyMate",
     "imageSrc": "projects/scholarly_mate.png",
     "description": "Allows students to create a personalized study schedule, set reminders for assignments and exams, and track progress on learning goals.",
     "skills": ["Django", "Python", "HTML", "CSS"],
     "demo": "https://scholarlymate-1.onrender.com/",
     "source": "https://github.com/BearB34R/ScholarlyMate"
-  },
-  {
-    "title": "Neon News",
-    "imageSrc": "projects/neon_news.png",
-    "description": "Leveraging news APIs to provide users with the latest news articles, and a search feature to find articles on specific topics.",
-    "skills": ["JavaScript", "HTML", "CSS", "Node.js", "Express.js"],
-    "demo": "https://deploying-neon-news-0469d6666bdc.herokuapp.com/",
-    "source": "https://github.com/BearB34R/FullyHacks2024"
   }
 ]
