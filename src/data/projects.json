@@ -4,7 +4,7 @@
     "imageSrc": "projects/memEasy.png",
     "description": "A modern iOS flashcard application that streamlines studying through intuitive swipe gestures and smart progress tracking. Built with SwiftUI and leveraging SwiftData for persistence, the app allows users to create custom decks, import flashcards from PDFs, and study with engaging card animations.",
     "skills": ["Swift", "SwiftUI", "Core Data", "PDFKit"],
-    "demo": "https://www.youtube.com/watch?v=3Q6J9Q1Z9ZI",
+    "demo": "https://www.youtube.com/watch?v=0Qu5sOiSkIM",
     "source": "https://github.com/BearB34R/memEasy"
   },
   {
