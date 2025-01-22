@@ -36,7 +36,7 @@
 }
 
 .image {
-  width: 800px; /* Increased from 600px */
+  width: 600px; /* Increased from 600px */
   height: auto;
   object-fit: contain;
   border-radius: 10px;
